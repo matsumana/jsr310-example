@@ -61,7 +61,7 @@ public class DateUtilTest {
         LocalDateTime actual = LocalDateTime.parse("2014/04/31 03:04:05.123",
                 DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS").withResolverStyle(ResolverStyle.LENIENT));
 
-        // 存在しない日の前日にパースされる
+        // 存在しない日の翌日にパースされる
         assertThat(actual, is(expected));
     }
 
